@@ -87,12 +87,6 @@ export default function SignIn() {
             <p className="text-slate-500">Sign in to continue your property search</p>
           </div>
 
-          {/* Demo credentials hint */}
-          <div className="bg-brand-50 border border-brand-100 rounded-xl p-3 mb-6 text-sm text-brand-700">
-            <strong>Demo:</strong> demo@househunt.com / demo1234
-            <span className="ml-2 text-brand-400 text-xs">(run npm run seed first)</span>
-          </div>
-
           {apiError && (
             <div className="bg-red-50 border border-red-200 text-red-600 rounded-xl px-4 py-3 text-sm mb-5">
               {apiError}
