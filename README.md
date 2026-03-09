@@ -113,29 +113,6 @@ npm run dev
 
 ---
 
-## Environment Variables
-
-### `backend/.env`
-```env
-MONGO_URI=mongodb://127.0.0.1:27017/househunt
-JWT_SECRET=househunt_jwt_super_secret_key_change_in_prod_2025
-JWT_EXPIRES_IN=7d
-PORT=5000
-CLIENT_URL=http://localhost:5173
-NODE_ENV=development
-```
-
-**MongoDB Atlas:** Replace `MONGO_URI` with your Atlas connection string:
-```
-MONGO_URI=mongodb+srv://<user>:<pass>@cluster0.xxxxx.mongodb.net/househunt?retryWrites=true&w=majority
-```
-
-### `househunt/.env` (frontend)
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
----
 
 ## Database Seed
 
@@ -228,62 +205,6 @@ All API calls go through `src/api/client.js` — an axios instance that:
 4. `AuthContext` bootstraps on mount by calling `GET /api/auth/me`
 5. Every API request attaches `Authorization: Bearer <token>` via axios interceptor
 6. On 401, tokens are cleared and user is signed out
-
----
-
-## Example API Requests
-
-### Register
-```bash
-curl -X POST http://localhost:5000/api/auth/register \
-  -H "Content-Type: application/json" \
-  -d '{"name":"Alice Smith","email":"alice@example.com","password":"secret123","phone":"555-9999"}'
-```
-
-### Login
-```bash
-curl -X POST http://localhost:5000/api/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{"email":"demo@househunt.com","password":"demo1234"}'
-```
-
-### Get Properties (filtered)
-```bash
-curl "http://localhost:5000/api/properties?city=London&status=For+Sale&sort=price-asc&page=1&limit=6"
-```
-
-### Create Property (auth required)
-```bash
-curl -X POST http://localhost:5000/api/properties \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer <your_jwt_token>" \
-  -d '{
-    "title": "Stunning Chelsea Flat",
-    "description": "Luxurious flat in the heart of Chelsea with river views and modern finishes.",
-    "price": 3200,
-    "location": "Chelsea, SW3",
-    "city": "London",
-    "propertyType": "Apartment",
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "area": 950,
-    "status": "For Rent",
-    "images": ["https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600"]
-  }'
-```
-
-### Create Booking
-```bash
-curl -X POST http://localhost:5000/api/bookings \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer <your_jwt_token>" \
-  -d '{"propertyId":"<property_id>","bookingDate":"2025-08-15","message":"Can we view this Saturday?"}'
-```
-
-### Health Check
-```bash
-curl http://localhost:5000/api/health
-```
 
 ---
 
