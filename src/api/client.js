@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // ── Base URL — reads from Vite env, falls back to localhost:5000 ──────────────
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const BASE_URL = import.meta.env.VITE_API_URL || "https://househunt-backend-1syh.onrender.com";
 
 const api = axios.create({
   baseURL: BASE_URL,
