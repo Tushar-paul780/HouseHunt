@@ -120,7 +120,7 @@ export default function SignUp() {
               <label className="block text-sm font-semibold text-slate-700 mb-1.5">Full Name</label>
               <div className="relative">
                 <FiUser className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
-                <input type="text" value={form.name} onChange={e=>update("name",e.target.value)} placeholder="John Smith"
+                <input type="text" value={form.name} onChange={e=>update("name",e.target.value)} placeholder="Your Name"
                   className={`w-full pl-10 pr-4 py-3 border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 transition-all ${errors.name?"border-red-400 bg-red-50":"border-slate-200"}`} />
               </div>
               {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
@@ -138,7 +138,7 @@ export default function SignUp() {
               <label className="block text-sm font-semibold text-slate-700 mb-1.5">Phone Number</label>
               <div className="relative">
                 <FiPhone className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
-                <input type="tel" value={form.phone} onChange={e=>update("phone",e.target.value)} placeholder="+1 555 000 0000"
+                <input type="tel" value={form.phone} onChange={e=>update("phone",e.target.value)} placeholder="+91 9876543210"
                   className={`w-full pl-10 pr-4 py-3 border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 transition-all ${errors.phone?"border-red-400 bg-red-50":"border-slate-200"}`} />
               </div>
               {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}

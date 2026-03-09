@@ -63,8 +63,10 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Contact Us</h4>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3"><FiMapPin className="text-brand-500 mt-0.5 flex-shrink-0" /><span className="text-sm leading-relaxed">350 Fifth Avenue, Suite 4100<br/>New York, NY 10118</span></li>
-              <li className="flex items-center gap-3"><FiPhone className="text-brand-500 flex-shrink-0" /><a href="tel:+15559876543" className="text-sm hover:text-brand-400 transition-colors">+1 (555) 987-6543</a></li>
+              <li className="flex items-start gap-3"><FiMapPin className="text-brand-500 mt-0.5 flex-shrink-0" /><span className="text-sm leading-relaxed">HouseHunt Office  
+                    2nd Floor, Tech Park Building  
+                    Sector V,Kolkata, West Bengal</span></li>
+              <li className="flex items-center gap-3"><FiPhone className="text-brand-500 flex-shrink-0" /><a href="tel:+919876543210" className="text-sm hover:text-brand-400 transition-colors">+91 9876543210</a></li>
               <li className="flex items-center gap-3"><FiMail className="text-brand-500 flex-shrink-0" /><a href="mailto:hello@househunt.com" className="text-sm hover:text-brand-400 transition-colors">hello@househunt.com</a></li>
             </ul>
             <div className="mt-6">
